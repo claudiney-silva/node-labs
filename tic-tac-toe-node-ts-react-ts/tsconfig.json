@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["es2019"], 
+    "sourceMap": true,
+    "outDir": "dist",
+    "allowJs": true,
+    // "strict": true,
+    "rootDir": ".",
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+		"strictFunctionTypes": true,
+		"noImplicitThis": true,
+		"resolveJsonModule": true,
+		"alwaysStrict": true,
+		"removeComments": true,
+		"noImplicitReturns": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@test/*": ["./test/*"],
+    },
+
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+		"rootDirs": ["./src", "./test"],
+		"typeRoots": ["./@types", "./node_modules/@types"],
+
+    /* Advanced Options */
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./src/**/*.ts", "./test/**/*.ts", "test/jest-setup.js"],
+  "exclude": ["./node_modules/*", "dist"]
+}

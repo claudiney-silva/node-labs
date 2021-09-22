@@ -1,0 +1,10 @@
+{
+  "App": {
+    "database": {
+      "mongoUrl": "mongodb://root:rootpassword@localhost:27017/tic-tac-toe-db-test?authSource=admin"
+    },
+    "logger": {
+      "enabled": false
+    }
+  }
+}

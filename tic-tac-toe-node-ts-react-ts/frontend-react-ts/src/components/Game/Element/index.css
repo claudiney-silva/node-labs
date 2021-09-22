@@ -1,0 +1,24 @@
+.element {
+  flex: 1 1 auto;
+  width: 32%;
+  height: 180px;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  cursor: pointer;
+  margin: 1px;
+  border: 1px solid #ccc;
+  transition: ease 0.5s all;
+}
+
+.element:hover,
+.element:focus {
+  background: #eaeaea;
+  outline: none;
+}
+
+.element.disabled {
+  pointer-events: none;
+}

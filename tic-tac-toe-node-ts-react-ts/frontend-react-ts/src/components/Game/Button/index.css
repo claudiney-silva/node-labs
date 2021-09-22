@@ -1,0 +1,18 @@
+.button {
+  flex: 1;
+  border: 1px solid #ccc;
+  margin: 2px;
+  background: #fff;
+  cursor: pointer;
+  padding: 10px;
+  max-width: 160px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background: rgb(236, 236, 236);
+}
+
+.button.active {
+  background: #d8d8d8;
+}

@@ -1,0 +1,10 @@
+{
+  "App": {
+    "port": "PORT",
+    "mode": "NODE_ENV",
+    "url": "BASE_URL",
+    "database": {
+      "mongoUrl": "MONGODB_URL"
+    }
+  }
+}

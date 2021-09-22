@@ -1,0 +1,60 @@
+import swaggerJSDoc from 'swagger-jsdoc';
+import config from 'config';
+
+const definition = {
+  openapi: '3.0.1',
+  info: {
+    title: 'Jogo da Velha API',
+    version: '0.0.1',
+    description: 'API para o Jogo da Velha',
+    // termsOfService: 'http://api_url/terms/',
+    license: {
+      name: 'Apache 2.0',
+      url: 'https://www.apache.org/licenses/LICENSE-2.0.html',
+    },
+    contact: {
+      name: 'Claudiney Calixto da Silva',
+      url: 'https://effetivo.com.br',
+      email: 'clau.li.erd@gmail.com',
+    },
+    basePath: '/',
+  },
+  // security: [{ bearerAuth: [] }],
+  /*
+  components: {
+    securitySchemes: {
+      bearerAuth: {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+      },
+    },
+  },
+  */
+  servers: [
+    {
+      url: `${config.get('App.url')}`,
+      description: 'Server',
+    },
+    /*
+    {
+      url: 'http://localhost:3000/',
+      description: 'Local server',
+    },
+    */
+  ],
+};
+
+const swaggerJSOptions = {
+  definition,
+  apis: ['**/controllers/**/**.ts'],
+};
+
+export const swaggerDocs = swaggerJSDoc(swaggerJSOptions);
+
+export const swaggerUIOtions = {
+  explorer: false,
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'API para o Jogo da Velha',
+  // customfavIcon: "/assets/favicon.ico",
+};

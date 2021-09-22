@@ -1,0 +1,8 @@
+export const GAME_LOADING_ON = 'GAME_LOADING_ON'
+export const GAME_LOADING_OFF = 'GAME_LOADING_OFF'
+export const GAME_WINNER = 'GAME_WINNER'
+export const GAME_NEW = 'GAME_NEW'
+export const GAME_APPLY = 'GAME_APPLY'
+export const GAME_MOVE = 'GAME_MOVE'
+export const GAME_HISTORY_BACK = 'GAME_HISTORY_BACK'
+export const GAME_MENU = 'GAME_MENU'
