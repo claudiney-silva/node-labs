@@ -1,0 +1,42 @@
+version: '3'
+
+services: 
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./api
+    ports:
+      - "3000"
+    networks: 
+      - lb-network  
+
+  nginx-web: 
+    container_name: nginx-web
+    build: 
+      dockerfile: Dockerfile
+      context: ./nginx-web
+    ports:
+      - "3001:80"
+    networks: 
+      - lb-network  
+    volumes:
+      - ./nginx-web/config:/etc/nginx
+      
+  nginx-lb: 
+    container_name: nginx-lb
+    build: 
+      dockerfile: Dockerfile
+      context: ./nginx-lb
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+      - nginx-web
+    networks: 
+      - lb-network  
+    volumes:
+      - ./nginx-lb/config:/etc/nginx
+
+networks: 
+    lb-network:
+        driver: bridge
